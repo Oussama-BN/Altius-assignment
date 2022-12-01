@@ -39,7 +39,7 @@ public class Altius_Assignment_2 {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
 
-        //Retrieving the size of the table
+        // Retrieving the size of the table
         int size = 0;
         if ((st = br.readLine()) != null) {
             size = Integer.parseInt(st);
@@ -56,7 +56,7 @@ public class Altius_Assignment_2 {
             Tab[i] = Integer.parseInt(str_table[i]);
         }
 
-        //System.out.print("The minimum distance : "+minimumDistances(Tab));
+        // System.out.print("The minimum distance : "+minimumDistances(Tab));
         System.out.print(minimumDistances(Tab));
     }
 }
