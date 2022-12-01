@@ -2,5 +2,6 @@
 
 Notes :  
 Programming language : JAVA.  
+JDK version : 19.0.1. 
 IDE : Intellij Idea.   
-Please don't forget to modify the file path.  
+** Please dmake sure to modify the assignment file path.  
