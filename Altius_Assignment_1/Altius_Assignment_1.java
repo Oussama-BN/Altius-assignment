@@ -1,7 +1,7 @@
 import java.io.*;
 
 public class Altius_Assignment_1 {
-    //Creating a class for the linked lists
+    // Creating a class for the linked lists
     public static class LinkedList {
         SinglyLinkedListNode head; // head of list
 
@@ -16,7 +16,7 @@ public class Altius_Assignment_1 {
                 next = null;
             }
         }
-        //The function insert help us later to create the lists from the file
+        // The function insert help us later to create the lists from the file
         public static LinkedList insert(LinkedList list, int data) {
 
             SinglyLinkedListNode new_node = new SinglyLinkedListNode(data);
@@ -65,19 +65,17 @@ public class Altius_Assignment_1 {
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
 
-        //Retrieving the number of test cases
+        // Retrieving the number of test cases
         int NB_cases = 0;
         if ((st = br.readLine()) != null) {
             NB_cases = Integer.parseInt(st);
-            //System.out.println("The number of test cases is : "+NB_cases);
         }
         else {
             System.out.print("The file is empty");
         }
         // The loop for the test cases
         // first we retrieve the data of lists of each test case from the input file
-        for (int i=0; i< NB_cases; i++) {
-            //System.out.println("test case number : "+(i+1));
+        for (int i=0; i< NB_cases; i++) {           
             int List1_length, List2_length;
 
             // Creating the first lists
@@ -89,17 +87,16 @@ public class Altius_Assignment_1 {
                 list1 = LinkedList.insert(list1, Integer.parseInt(st));
             }
 
-            //Creating the second list
+            // Creating the second list
             st = br.readLine();
-            List2_length = Integer.parseInt(st);
-            //System.out.println("The length of the second list is : "+List2_length);
+            List2_length = Integer.parseInt(st);           
             LinkedList list2 = new LinkedList();
             for (int j=0; j<List2_length; j++){
                 st = br.readLine();
                 list2 = LinkedList.insert(list2, Integer.parseInt(st));
             }
 
-            //Here we call the function that compare the two lists
+            // Here we call the function that compare the two lists
             System.out.println(LinkedList.compare_lists(list1.head, list2.head));
         }
     }
